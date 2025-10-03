@@ -1,12 +1,12 @@
 const phoneInputField = document.querySelector('#contact-us-tel');
 const iti = window.intlTelInput(phoneInputField, {
 	initialCountry: 'auto',
-	// geoIpLookup: (success, failure) => {
-	// 	fetch('https://ipapi.co/json')
-	// 		.then(res => res.json())
-	// 		.then(data => success(data.country_code))
-	// 		.catch(() => failure());
-	// },
+	geoIpLookup: (success, failure) => {
+		fetch('https://ipapi.co/json')
+			.then(res => res.json())
+			.then(data => success(data.country_code))
+			.catch(() => failure());
+	},
 	separateDialCode: true,
 	preferredCountries: ['ae', 'sa'],
 	utilsScript:
