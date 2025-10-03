@@ -1,0 +1,36 @@
+@use './../helpers' as *;
+
+.services {
+	&__body {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		row-gap: rem(40);
+	}
+
+	&__list {
+		--gapY: #{rem(40)};
+		--gapX: #{rem(20)};
+
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: var(--gapY) var(--gapX);
+	}
+
+	&__item {
+		width: 32%;
+
+		@include mobile {
+			width: calc(50% - var(--gapX));
+		}
+
+		@include mobile-s {
+			width: 100%;
+		}
+
+		& .card__body {
+			--paddingX: #{rem(20)};
+		}
+	}
+}

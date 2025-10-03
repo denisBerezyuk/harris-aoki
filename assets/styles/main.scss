@@ -1,0 +1,25 @@
+@use 'normalize';
+@use 'fonts';
+@use 'variables';
+@use 'utils';
+@use 'globals';
+
+@use 'blocks/button';
+@use 'blocks/burger-button';
+@use 'blocks/social';
+@use 'blocks/field';
+@use 'blocks/header';
+@use 'blocks/brands';
+@use 'blocks/section';
+@use 'blocks/card';
+@use 'blocks/card-article';
+@use 'blocks/pop-up';
+@use 'blocks/hero';
+@use 'blocks/how';
+@use 'blocks/about-us';
+@use 'blocks/services';
+@use 'blocks/who';
+@use 'blocks/case-studies';
+@use 'blocks/partners-say';
+@use 'blocks/cto';
+@use 'blocks/footer';

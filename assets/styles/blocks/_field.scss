@@ -1,0 +1,35 @@
+@use './../helpers' as *;
+
+.field {
+	display: flex;
+	flex-direction: column;
+	row-gap: rem(10);
+
+	&__input,
+	&__select,
+	textarea.field__input {
+		width: 100%;
+		height: rem(47);
+		padding-inline: rem(18);
+		border: var(--border-gray-dark-light);
+
+		&,
+		&::placeholder {
+			font: inherit;
+		}
+	}
+
+	textarea.field__input {
+		padding-block: rem(12);
+		height: 129px;
+	}
+
+	&__select {
+		appearance: none;
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		background-image: url('./../icons/arrow-down.svg');
+		background-position: center right rem(18);
+		background-repeat: no-repeat;
+	}
+}

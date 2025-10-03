@@ -1,0 +1,82 @@
+@use './../helpers' as *;
+
+.header {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	display: flex;
+	justify-content: center;
+	z-index: var(--z-header);
+	min-height: var(--header-height);
+	border-bottom: var(--border);
+
+	&__inner {
+		flex-grow: 1;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		column-gap: rem(16);
+	}
+
+	&__logo {
+		& .logo__image {
+			width: fluid(305, 165);
+		}
+	}
+
+	&__menu {
+		@include mobile {
+			position: fixed;
+			inset: 0;
+			transition-duration: var(--transition-duration);
+
+			&:not(.is-active) {
+				@include mobile {
+					@include hide;
+				}
+			}
+		}
+
+		&-list {
+			display: flex;
+			align-items: center;
+			column-gap: fluid(36, 16);
+
+			@include mobile {
+				overflow-y: auto;
+				flex-direction: column;
+				align-items: start;
+				row-gap: rem(28);
+				width: calc(100vw - 26%);
+				height: 100%;
+				padding: var(--header-height) var(--container-padding-x) 0 rem(24);
+				margin-left: auto;
+				background-color: var(--color-white);
+			}
+		}
+
+		&-link {
+			@include click-area(rem(44));
+
+			font-size: rem(16);
+			font-weight: 500;
+			color: var(--color-white);
+
+			@include mobile {
+				font-size: rem(20);
+				line-height: 1;
+				color: var(--color-secondary);
+
+				&:not(:first-child) {
+				}
+			}
+		}
+	}
+
+	&__burger-button {
+		@include mobile-above {
+			display: none;
+		}
+	}
+}

@@ -1,0 +1,21 @@
+@use './../helpers' as *;
+
+.button {
+	@include fluid-text(16, 14);
+
+	display: inline-block;
+	padding: rem(12) fluid(40, 16);
+	font-weight: 600;
+	line-height: 1.4;
+	color: var(--color-blue);
+	text-transform: uppercase;
+	text-align: center;
+	background-color: var(--color-accent);
+	border: none;
+	border-radius: 0;
+
+	@include hover {
+		background-color: var(--color-secondary);
+		color: var(--color-white);
+	}
+}

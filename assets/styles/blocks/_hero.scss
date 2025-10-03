@@ -1,0 +1,143 @@
+@use './../helpers' as *;
+
+.hero {
+	position: relative;
+	padding-top: var(--header-height);
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		height: calc(100% - rem(19));
+		background-image: image-set(var(--bgUrl) 1x, var(--bgUrl2x) 2x);
+		background-size: cover;
+		background-position: top;
+		background-repeat: no-repeat;
+		filter: brightness(var(--brightness));
+
+		@include mobile {
+			height: 66.5%;
+			background-image: image-set(
+				var(--bgMobileUrl) 1x,
+				var(--bgMobileUrl2x) 2x
+			);
+		}
+	}
+
+	&__inner {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		row-gap: rem(81);
+		padding-top: fluid(107, 40);
+
+		@include tablet {
+			row-gap: rem(60);
+		}
+
+		@include mobile {
+			row-gap: rem(0);
+		}
+	}
+
+	&__body {
+		position: relative;
+		display: grid;
+		grid-template-columns: minmax(auto, rem(283)) minmax(rem(320), auto) minmax(
+				auto,
+				rem(283)
+			);
+		column-gap: rem(16);
+		align-items: center;
+
+		@include mobile {
+			grid-template-columns: 1fr;
+			row-gap: rem(42);
+		}
+	}
+
+	&__advantages {
+		display: contents;
+
+		@include mobile {
+			display: flex;
+		}
+
+		&-list {
+			display: flex;
+			flex-direction: column;
+			row-gap: rem(23);
+			padding: fluid(30, 24) fluid(24, 16) rem(30);
+			background-color: var(--color-light);
+
+			@include mobile-above {
+				&--first {
+					order: -1;
+				}
+			}
+
+			@include mobile {
+				flex-grow: 1;
+			}
+		}
+
+		&-item {
+			display: grid;
+			grid-template-columns: fluid(77, 40) auto;
+			align-items: center;
+			column-gap: rem(10);
+			color: var(--color-secondary);
+
+			&:not(:last-child) {
+				padding-bottom: rem(18);
+				border-bottom: var(--border-gray);
+			}
+		}
+
+		&-value {
+			order: -1;
+			font-size: fluid(40, 20);
+			font-weight: 600;
+			line-height: 1;
+		}
+
+		&-key {
+			font-size: fluid(16, 10);
+			font-weight: 500;
+			line-height: rem(22);
+		}
+	}
+
+	&__content {
+		text-align: center;
+		max-width: rem(472);
+		margin-inline: auto;
+
+		@include mobile {
+			max-width: none;
+		}
+	}
+
+	&__title {
+		color: var(--color-accent);
+		letter-spacing: var(--letter-spacing-base);
+
+		&:not(:last-child) {
+			margin-bottom: rem(14);
+		}
+	}
+
+	&__description {
+		color: var(--color-accent);
+
+		&:not(:last-child) {
+			margin-bottom: fluid(32, 24);
+		}
+	}
+
+	&__button {
+		margin-top: auto;
+	}
+}

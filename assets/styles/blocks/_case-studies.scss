@@ -1,0 +1,17 @@
+@use './../helpers' as *;
+
+.case-studies {
+	&__list {
+		display: grid;
+		align-items: center;
+		gap: rem(20);
+
+		@include mobile-above {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+
+	&__item {
+		height: 100%;
+	}
+}

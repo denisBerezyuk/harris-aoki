@@ -1,0 +1,45 @@
+@use './../helpers' as *;
+
+.brands {
+	&__inner {
+		overflow-x: hidden;
+		display: flex;
+		align-items: center;
+		padding: rem(10) rem(30);
+		background-color: var(--color-white);
+		border-bottom: var(--border-fat-blue);
+		box-shadow: var(--shadow);
+
+		@include hover {
+			& .brands__list {
+				animation-play-state: paused;
+			}
+		}
+
+		@include mobile {
+			padding-block: 0;
+		}
+	}
+
+	&__list {
+		display: flex;
+		align-items: center;
+		gap: rem(20);
+		animation: scroll 5s linear infinite;
+	}
+
+	&__item-image {
+		min-width: fluid(190, 106);
+		height: rem(100);
+		object-fit: contain;
+	}
+}
+
+@keyframes scroll {
+	from {
+		transform: translateX(0);
+	}
+	to {
+		transform: translateX(-100%);
+	}
+}

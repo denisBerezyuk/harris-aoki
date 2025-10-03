@@ -1,0 +1,24 @@
+@use './../helpers' as *;
+
+.social {
+	&__list {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: fluid(28, 18);
+	}
+
+	&__item {
+		display: flex;
+	}
+
+	&__link {
+		color: var(--color-secondary);
+
+		@include mobile {
+			& svg {
+				@include square(rem(15));
+			}
+		}
+	}
+}

@@ -1,0 +1,39 @@
+@use './../helpers' as *;
+
+.who {
+	padding-block: fluid(90, 40);
+	background-color: var(--color-gray);
+
+	&__inner {
+		display: flex;
+		flex-direction: column;
+		row-gap: rem(40);
+	}
+
+	&__list {
+		display: grid;
+		grid-template-columns: repeat(4, minmax(auto, rem(238)));
+		align-items: center;
+		gap: fluid(40, 16);
+		margin-inline: auto;
+
+		@include mobile {
+			grid-template-columns: repeat(2, minmax(auto, rem(238)));
+		}
+	}
+
+	&__item {
+		@include fluid-text(24, 18);
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 100%;
+		padding: fluid(24, 18) fluid(24, 14);
+		font-weight: 500;
+		text-align: center;
+		color: var(--color-secondary);
+		background-color: var(--color-white);
+		box-shadow: var(--shadow-light);
+	}
+}

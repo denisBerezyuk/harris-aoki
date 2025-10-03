@@ -1,0 +1,20 @@
+@use './../helpers' as *;
+
+.section {
+	margin-block: var(--section-spacing-y);
+
+	&:not(.section--disabled-layout):not(:has(> [class*='inner'])) {
+		display: flex;
+		flex-direction: column;
+		row-gap: rem(60);
+
+		@include mobile {
+			row-gap: rem(40);
+		}
+	}
+}
+
+.section__title {
+	text-align: center;
+	text-transform: uppercase;
+}
