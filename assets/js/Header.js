@@ -12,12 +12,15 @@ class Header {
 	};
 
 	constructor() {
-		this.rootElement = document.querySelector(this.selectors.root);
-		this.burgerButtonElement = this.rootElement.querySelector(
-			this.selectors.burgerButton
-		);
-		this.menuElement = this.rootElement.querySelector(this.selectors.menu);
-		this.linkElement = this.menuElement.querySelectorAll(this.selectors.link);
+		const { root, burgerButton, menu, link } = this.selectors;
+
+		this.rootElement = document.querySelector(root);
+
+		if (!this.rootElement) return;
+
+		this.burgerButtonElement = this.rootElement.querySelector(burgerButton);
+		this.menuElement = this.rootElement.querySelector(menu);
+		this.linkElement = this.menuElement.querySelectorAll(link);
 
 		this.bindEvents();
 	}
@@ -26,17 +29,28 @@ class Header {
 		this.toggle();
 	};
 
-	toggle() {
-		this.burgerButtonElement.classList.toggle(this.stateClasses.isActive);
-		this.menuElement.classList.toggle(this.stateClasses.isActive);
+	toggle(isClose) {
+		const isCloseVisible = isClose !== undefined ? false : undefined;
 
-		document.documentElement.classList.toggle(this.stateClasses.isLock);
+		this.burgerButtonElement.classList.toggle(
+			this.stateClasses.isActive,
+			isCloseVisible
+		);
+		this.menuElement.classList.toggle(
+			this.stateClasses.isActive,
+			isCloseVisible
+		);
+
+		document.documentElement.classList.toggle(
+			this.stateClasses.isLock,
+			isCloseVisible
+		);
 	}
 
 	onMenuClick = event => {
 		if (!event.target.closest(this.selectors.link)) return;
 
-		this.toggle();
+		this.toggle(true);
 	};
 
 	bindEvents() {
