@@ -1,5 +1,10 @@
 @use 'helpers' as *;
 
+html,
+body {
+	overflow-x: clip;
+}
+
 html.is-lock {
 	overflow: hidden;
 }
