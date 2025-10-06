@@ -5,6 +5,10 @@ class PopUp {
 		openButton: '[data-js-pop-up-open-button]',
 	};
 
+	stateClasses = {
+		isLock: 'is-lock',
+	};
+
 	constructor() {
 		this.popUpElement = document.querySelector(this.selectors.popUp);
 		this.closeButtonElement = this.popUpElement.querySelector(
@@ -19,10 +23,14 @@ class PopUp {
 
 	onOpenButtonClick = () => {
 		this.popUpElement.showModal();
+
+		document.documentElement.classList.add(this.stateClasses.isLock);
 	};
 
 	onCloseButtonClick = () => {
 		this.popUpElement.close();
+
+		document.documentElement.classList.remove(this.stateClasses.isLock);
 	};
 
 	bindEvents() {

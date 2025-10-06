@@ -9,12 +9,12 @@
 			rel="stylesheet"
 			href="https://cdn.jsdelivr.net/npm/intl-tel-input@25.11.2/build/css/intlTelInput.css"
 		/>
-		<link rel="stylesheet" href="./assets/styles/main.css" />
+		<link rel="stylesheet" href="./assets/styles/main.min.css" />
 		<script
 			src="https://cdn.jsdelivr.net/npm/intl-tel-input@25.11.2/build/js/intlTelInput.min.js"
 			defer
 		></script>
-		<script src="./assets/js/main.js" type="module" defer></script>
+		<script src="./assets/js/main.js" type="module"></script>
 	</head>
 	<body>
 		<header class="header" data-js-header>
@@ -281,10 +281,18 @@
 						</li>
 						<li class="how__list-item">
 							<div class="how__card card">
-								<img class="card__image" src="./assets/images/why/2/1.jpg"
-								srcset=" ./assets/images/why/2/2.jpg 1x,
-								./assets/images/why/2/2@2x.jpg 2x "3/ width="283" height="210"
-								loading="lazy" alt="" />
+								<img
+									class="card__image"
+									src="./assets/images/why/2/1.jpg"
+									srcset="
+										./assets/images/why/2/2.jpg    1x,
+										./assets/images/why/2/2@2x.jpg 2x
+									"
+									width="283"
+									height="210"
+									loading="lazy"
+									alt=""
+								/>
 								<div class="card__body">
 									<h3 class="card__title h4">End-to-end Pre-Opening Support</h3>
 								</div>
@@ -640,7 +648,9 @@
 			<section class="who section" aria-labelledby="who-title">
 				<div class="who__inner container">
 					<header class="who__header">
-						<h2 class="who__title section__title">Who we help</h2>
+						<h2 class="who__title section__title" id="who-title">
+							Who we help
+						</h2>
 					</header>
 					<ul class="who__list">
 						<li class="who__item">Owners</li>
@@ -750,10 +760,10 @@
 				</ul>
 			</section>
 			<section
-				class="partners-say section container"
+				class="partners-say section"
 				aria-labelledby="partners-say-title"
 			>
-				<header class="partners-say__header">
+				<header class="partners-say__header container">
 					<h2
 						class="partners-say__title section__title"
 						id="partners-say-title"
@@ -761,7 +771,537 @@
 						What Our Partners Say
 					</h2>
 				</header>
-				<div class="partners-say__body"></div>
+				<div class="partners-say__reviews reviews container">
+					<header class="reviews__header">
+						<h3 class="visually-hidden">Reviews</h3>
+						<img
+							class="reviews__logo-image"
+							src="./assets/images/logo-google.svg"
+							width="80"
+							height="25"
+							loading="lazy"
+							alt=""
+						/>
+						<div class="reviews__rating">
+							<b class="reviews__rating-status">Excellent</b>
+							<ul class="reviews__stars-list">
+								<li class="reviews__stars-item">
+									<img
+										class="reviews__star-icon"
+										src="./assets/icons/start.svg"
+										width="18"
+										height="18"
+										loading="lazy"
+										alt=""
+									/>
+								</li>
+								<li class="reviews__stars-item">
+									<img
+										class="reviews__star-icon"
+										src="./assets/icons/start.svg"
+										width="18"
+										height="18"
+										loading="lazy"
+										alt=""
+									/>
+								</li>
+								<li class="reviews__stars-item">
+									<img
+										class="reviews__star-icon"
+										src="./assets/icons/start.svg"
+										width="18"
+										height="18"
+										loading="lazy"
+										alt=""
+									/>
+								</li>
+								<li class="reviews__stars-item">
+									<img
+										class="reviews__star-icon"
+										src="./assets/icons/start.svg"
+										width="18"
+										height="18"
+										loading="lazy"
+										alt=""
+									/>
+								</li>
+								<li class="reviews__stars-item">
+									<img
+										class="reviews__star-icon"
+										src="./assets/icons/start.svg"
+										width="18"
+										height="18"
+										loading="lazy"
+										alt=""
+									/>
+								</li>
+							</ul>
+							<b class="reviews__rating-data">5.0 | 10 reviews</b>
+						</div>
+						<a
+							class="reviews__button button"
+							href="/"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							Write a review
+						</a>
+					</header>
+					<ul class="reviews__list">
+						<li class="reviews__item">
+							<article class="card-review">
+								<header class="card-review__header">
+									<img
+										class="card-review__avatar"
+										src="./assets/images/reviews/avatars/1/1.jpg"
+										srcset="
+											./assets/images/reviews/avatars/1/1.jpg    1x,
+											./assets/images/reviews/avatars/1/1@2x.jpg 2x
+										"
+										width="40"
+										height="40"
+										loading="lazy"
+										alt=""
+									/>
+									<div class="card-review__data">
+										<h4 class="card-review__fullname">Maria Asaad</h4>
+										<time class="card-review__date" datetime="2025-03-22">
+											22 March 2025
+										</time>
+									</div>
+									<img
+										class="card-review__icon"
+										src="./assets/icons/google.svg"
+										width="20"
+										height="20"
+										loading="lazy"
+										alt=""
+									/>
+								</header>
+								<div class="card-review__body">
+									<div class="card-review__rating">
+										<ul class="card-review__rating-list">
+											<li class="card-review__rating-item">
+												<img
+													class="card-review__rating-start"
+													src="./assets/icons/start.svg"
+													width="17"
+													height="17"
+													loading="lazy"
+													alt=""
+												/>
+											</li>
+											<li class="card-review__rating-item">
+												<img
+													class="card-review__rating-start"
+													src="./assets/icons/start.svg"
+													width="17"
+													height="17"
+													loading="lazy"
+													alt=""
+												/>
+											</li>
+											<li class="card-review__rating-item">
+												<img
+													class="card-review__rating-start"
+													src="./assets/icons/start.svg"
+													width="17"
+													height="17"
+													loading="lazy"
+													alt=""
+												/>
+											</li>
+											<li class="card-review__rating-item">
+												<img
+													class="card-review__rating-start"
+													src="./assets/icons/start.svg"
+													width="17"
+													height="17"
+													loading="lazy"
+													alt=""
+												/>
+											</li>
+											<li class="card-review__rating-item">
+												<img
+													class="card-review__rating-start"
+													src="./assets/icons/start.svg"
+													width="17"
+													height="17"
+													loading="lazy"
+													alt=""
+												/>
+											</li>
+										</ul>
+										<img
+											class="card-review__icon-verified"
+											src="./assets/icons/verified.svg"
+											width="17"
+											height="17"
+											loading="lazy"
+											alt=""
+										/>
+									</div>
+									<blockquote
+										class="card-review__description"
+										cite="https://harrisaoki.com/"
+									>
+										<p>
+											Partnering with Harris x Aoki has been one of the best
+											decisions for our bakery, and without a doubt, we would do
+											it again.
+										</p>
+									</blockquote>
+									<a
+										class="card-review__link"
+										href="/"
+										target="_blank"
+										rel="noopener noreferrer"
+										>Read more</a
+									>
+								</div>
+							</article>
+						</li>
+						<li class="reviews__item">
+							<article class="card-review">
+								<header class="card-review__header">
+									<img
+										class="card-review__avatar"
+										src="./assets/images/reviews/avatars/2/2.jpg"
+										srcset="
+											./assets/images/reviews/avatars/2/2.jpg    1x,
+											./assets/images/reviews/avatars/2/2@2x.jpg 2x
+										"
+										width="40"
+										height="40"
+										loading="lazy"
+										alt=""
+									/>
+									<div class="card-review__data">
+										<h4 class="card-review__fullname">Hither & Yon</h4>
+										<time class="card-review__date" datetime="2025-03-19">
+											19 March 2025
+										</time>
+									</div>
+									<img
+										class="card-review__icon"
+										src="./assets/icons/google.svg"
+										width="20"
+										height="20"
+										loading="lazy"
+										alt=""
+									/>
+								</header>
+								<div class="card-review__body">
+									<div class="card-review__rating">
+										<ul class="card-review__rating-list">
+											<li class="card-review__rating-item">
+												<img
+													class="card-review__rating-start"
+													src="./assets/icons/start.svg"
+													width="17"
+													height="17"
+													loading="lazy"
+													alt=""
+												/>
+											</li>
+											<li class="card-review__rating-item">
+												<img
+													class="card-review__rating-start"
+													src="./assets/icons/start.svg"
+													width="17"
+													height="17"
+													loading="lazy"
+													alt=""
+												/>
+											</li>
+											<li class="card-review__rating-item">
+												<img
+													class="card-review__rating-start"
+													src="./assets/icons/start.svg"
+													width="17"
+													height="17"
+													loading="lazy"
+													alt=""
+												/>
+											</li>
+											<li class="card-review__rating-item">
+												<img
+													class="card-review__rating-start"
+													src="./assets/icons/start.svg"
+													width="17"
+													height="17"
+													loading="lazy"
+													alt=""
+												/>
+											</li>
+											<li class="card-review__rating-item">
+												<img
+													class="card-review__rating-start"
+													src="./assets/icons/start.svg"
+													width="17"
+													height="17"
+													loading="lazy"
+													alt=""
+												/>
+											</li>
+										</ul>
+										<img
+											class="card-review__icon-verified"
+											src="./assets/icons/verified.svg"
+											width="17"
+											height="17"
+											loading="lazy"
+											alt=""
+										/>
+									</div>
+									<blockquote
+										class="card-review__description"
+										cite="https://harrisaoki.com/"
+									>
+										<p>
+											The team is highly professional, adaptable, innovative,
+											and supportive. They played a crucial role in bringing
+											Hither & Yon from dream to reality.
+										</p>
+									</blockquote>
+									<a
+										class="card-review__link"
+										href="/"
+										target="_blank"
+										rel="noopener noreferrer"
+										>Read more</a
+									>
+								</div>
+							</article>
+						</li>
+						<li class="reviews__item">
+							<article class="card-review">
+								<header class="card-review__header">
+									<img
+										class="card-review__avatar"
+										src="./assets/images/reviews/avatars/3/1.jpg"
+										srcset="
+											./assets/images/reviews/avatars/3/1.jpg    1x,
+											./assets/images/reviews/avatars/3/1@2x.jpg 2x
+										"
+										width="40"
+										height="40"
+										loading="lazy"
+										alt=""
+									/>
+									<div class="card-review__data">
+										<h4 class="card-review__fullname">Meera Alneyadi</h4>
+										<time class="card-review__date" datetime="2025-03-22">
+											21 March 2025
+										</time>
+									</div>
+									<img
+										class="card-review__icon"
+										src="./assets/icons/google.svg"
+										width="20"
+										height="20"
+										loading="lazy"
+										alt=""
+									/>
+								</header>
+								<div class="card-review__body">
+									<div class="card-review__rating">
+										<ul class="card-review__rating-list">
+											<li class="card-review__rating-item">
+												<img
+													class="card-review__rating-start"
+													src="./assets/icons/start.svg"
+													width="17"
+													height="17"
+													loading="lazy"
+													alt=""
+												/>
+											</li>
+											<li class="card-review__rating-item">
+												<img
+													class="card-review__rating-start"
+													src="./assets/icons/start.svg"
+													width="17"
+													height="17"
+													loading="lazy"
+													alt=""
+												/>
+											</li>
+											<li class="card-review__rating-item">
+												<img
+													class="card-review__rating-start"
+													src="./assets/icons/start.svg"
+													width="17"
+													height="17"
+													loading="lazy"
+													alt=""
+												/>
+											</li>
+											<li class="card-review__rating-item">
+												<img
+													class="card-review__rating-start"
+													src="./assets/icons/start.svg"
+													width="17"
+													height="17"
+													loading="lazy"
+													alt=""
+												/>
+											</li>
+											<li class="card-review__rating-item">
+												<img
+													class="card-review__rating-start"
+													src="./assets/icons/start.svg"
+													width="17"
+													height="17"
+													loading="lazy"
+													alt=""
+												/>
+											</li>
+										</ul>
+										<img
+											class="card-review__icon-verified"
+											src="./assets/icons/verified.svg"
+											width="17"
+											height="17"
+											loading="lazy"
+											alt=""
+										/>
+									</div>
+									<blockquote
+										class="card-review__description"
+										cite="https://harrisaoki.com/"
+									>
+										<p>
+											I had an amazing experience with HarrisxAoki Hospitality !
+											Their guidance and expertise truly elevated my catering
+											company .
+										</p>
+									</blockquote>
+									<a
+										class="card-review__link"
+										href="/"
+										target="_blank"
+										rel="noopener noreferrer"
+										>Read more</a
+									>
+								</div>
+							</article>
+						</li>
+						<li class="reviews__item">
+							<article class="card-review">
+								<header class="card-review__header">
+									<img
+										class="card-review__avatar"
+										src="./assets/images/reviews/avatars/4/1.jpg"
+										srcset="
+											./assets/images/reviews/avatars/4/1.jpg    1x,
+											./assets/images/reviews/avatars/4/1@2x.jpg 2x
+										"
+										width="40"
+										height="40"
+										loading="lazy"
+										alt=""
+									/>
+									<div class="card-review__data">
+										<h4 class="card-review__fullname">Yasin Allam</h4>
+										<time class="card-review__date" datetime="2025-03-19">
+											19 March 2025
+										</time>
+									</div>
+									<img
+										class="card-review__icon"
+										src="./assets/icons/google.svg"
+										width="20"
+										height="20"
+										loading="lazy"
+										alt=""
+									/>
+								</header>
+								<div class="card-review__body">
+									<div class="card-review__rating">
+										<ul class="card-review__rating-list">
+											<li class="card-review__rating-item">
+												<img
+													class="card-review__rating-start"
+													src="./assets/icons/start.svg"
+													width="17"
+													height="17"
+													loading="lazy"
+													alt=""
+												/>
+											</li>
+											<li class="card-review__rating-item">
+												<img
+													class="card-review__rating-start"
+													src="./assets/icons/start.svg"
+													width="17"
+													height="17"
+													loading="lazy"
+													alt=""
+												/>
+											</li>
+											<li class="card-review__rating-item">
+												<img
+													class="card-review__rating-start"
+													src="./assets/icons/start.svg"
+													width="17"
+													height="17"
+													loading="lazy"
+													alt=""
+												/>
+											</li>
+											<li class="card-review__rating-item">
+												<img
+													class="card-review__rating-start"
+													src="./assets/icons/start.svg"
+													width="17"
+													height="17"
+													loading="lazy"
+													alt=""
+												/>
+											</li>
+											<li class="card-review__rating-item">
+												<img
+													class="card-review__rating-start"
+													src="./assets/icons/start.svg"
+													width="17"
+													height="17"
+													loading="lazy"
+													alt=""
+												/>
+											</li>
+										</ul>
+										<img
+											class="card-review__icon-verified"
+											src="./assets/icons/verified.svg"
+											width="17"
+											height="17"
+											loading="lazy"
+											alt=""
+										/>
+									</div>
+									<blockquote
+										class="card-review__description"
+										cite="https://harrisaoki.com/"
+									>
+										<p>
+											great end to end consulting services. Shawn, Ryan and
+											Mariam have been amazing in helping us bring a UK fast
+											food.
+										</p>
+									</blockquote>
+									<a
+										class="card-review__link"
+										href="/"
+										target="_blank"
+										rel="noopener noreferrer"
+										>Read more</a
+									>
+								</div>
+							</article>
+						</li>
+					</ul>
+				</div>
 			</section>
 			<section class="cto section section--disabled-layout container" id="cto">
 				<div class="cto__body">
@@ -1100,7 +1640,6 @@
 								</label>
 								<textarea
 									class="field__input"
-									type="text"
 									id="contact-us-restaurant-or-cafe-description"
 									placeholder="I would like to ask a question regarding..."
 								></textarea>
@@ -1124,6 +1663,13 @@
 						Send enquiry
 					</button>
 				</form>
+				<div class="pop-up__message">
+					<h3 class="pop-up__message-title">Thank you!</h3>
+					<p class="pop-up__message-description">
+						Thank you for reaching out! We’ll be in touch with you shortly to
+						address your inquiry.
+					</p>
+				</div>
 			</div>
 		</dialog>
 	</body>

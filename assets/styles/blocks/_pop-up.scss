@@ -76,4 +76,12 @@
 		flex-direction: column;
 		row-gap: rem(16);
 	}
+
+	&__message {
+		display: flex;
+		flex-direction: column;
+		row-gap: rem(20);
+		margin-top: rem(10);
+		text-align: center;
+	}
 }

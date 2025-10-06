@@ -17,7 +17,6 @@ body {
 	font-weight: 300;
 	line-height: 1.5;
 	color: var(--color-dark);
-	background-color: var(--color-light);
 }
 
 main {
@@ -94,7 +93,7 @@ a {
 }
 
 :focus-visible {
-	outline: rem(2) dashed var(--color-light);
+	outline: rem(2) dashed var(--color-secondary);
 	outline-offset: rem(4);
 	transition-duration: 0s !important;
 }

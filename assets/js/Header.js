@@ -11,6 +11,16 @@ class Header {
 		isLock: 'is-lock',
 	};
 
+	stateAttributes = {
+		ariaLabel: 'aria-label',
+		title: 'title',
+	};
+
+	stateTexts = {
+		openMenu: 'Open menu',
+		closeMenu: 'Close menu',
+	};
+
 	constructor() {
 		const { root, burgerButton, menu, link } = this.selectors;
 
@@ -44,6 +54,22 @@ class Header {
 		document.documentElement.classList.toggle(
 			this.stateClasses.isLock,
 			isCloseVisible
+		);
+
+		const isActiveBurgerButton = this.burgerButtonElement.classList.contains(
+			this.stateClasses.isActive
+		);
+
+		const textCloseMenu = this.stateTexts.closeMenu;
+		const textOpenMenu = this.stateTexts.openMenu;
+
+		this.burgerButtonElement.setAttribute(
+			this.stateAttributes.title,
+			isActiveBurgerButton ? textCloseMenu : textOpenMenu
+		);
+		this.burgerButtonElement.setAttribute(
+			this.stateAttributes.ariaLabel,
+			isActiveBurgerButton ? textCloseMenu : textOpenMenu
 		);
 	}
 
