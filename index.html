@@ -30,6 +30,7 @@
 				</a>
 				<nav
 					class="header__menu"
+					id="header-menu"
 					aria-label="Main navigation"
 					data-js-header-menu
 				>
@@ -63,6 +64,8 @@
 					class="header__burger-button burger-button"
 					type="button"
 					aria-label="Open menu"
+					aria-expanded="false"
+					aria-controls="header-menu"
 					title="Open menu"
 					data-js-header-burger-button
 				>
@@ -98,6 +101,8 @@
 							<button
 								class="hero__button button"
 								type="button"
+								aria-haspopup="dialog"
+								aria-controls="contact-us"
 								data-js-pop-up-open-button
 							>
 								Request Restaurant Consultancy
@@ -489,6 +494,8 @@
 						<button
 							class="about-us__button button"
 							type="button"
+							aria-haspopup="dialog"
+							aria-controls="contact-us"
 							data-js-pop-up-open-button
 						>
 							book a call with us
@@ -639,6 +646,8 @@
 					<button
 						class="services__button button"
 						type="button"
+						aria-haspopup="dialog"
+						aria-controls="contact-us"
 						data-js-pop-up-open-button
 					>
 						Connect With Us
@@ -956,8 +965,10 @@
 										href="/"
 										target="_blank"
 										rel="noopener noreferrer"
-										>Read more</a
+										aria-label="Read full review on Harris Aoki Google profile"
 									>
+										Read more
+									</a>
 								</div>
 							</article>
 						</li>
@@ -1069,6 +1080,7 @@
 										href="/"
 										target="_blank"
 										rel="noopener noreferrer"
+										aria-label="Read full review on Harris Aoki Google profile"
 										>Read more</a
 									>
 								</div>
@@ -1182,6 +1194,7 @@
 										href="/"
 										target="_blank"
 										rel="noopener noreferrer"
+										aria-label="Read full review on Harris Aoki Google profile"
 										>Read more</a
 									>
 								</div>
@@ -1295,6 +1308,7 @@
 										href="/"
 										target="_blank"
 										rel="noopener noreferrer"
+										aria-label="Read full review on Harris Aoki Google profile"
 										>Read more</a
 									>
 								</div>
@@ -1317,6 +1331,8 @@
 					<button
 						class="cto__button button"
 						type="button"
+						aria-haspopup="dialog"
+						aria-controls="contact-us"
 						data-js-pop-up-open-button
 					>
 						Book Your Restaurant Consultation Today
@@ -1412,7 +1428,13 @@
 				</div>
 			</div>
 		</footer>
-		<dialog class="pop-up" id="contact-us" data-js-pop-up>
+		<dialog
+			class="pop-up"
+			id="contact-us"
+			role="dialog"
+			aria-modal="true"
+			data-js-pop-up
+		>
 			<div class="pop-up__inner">
 				<header class="pop-up__header">
 					<h2 class="visually-hidden">Contact us</h2>

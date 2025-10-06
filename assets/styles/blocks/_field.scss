@@ -13,6 +13,10 @@
 		padding-inline: rem(18);
 		border: var(--border-gray-dark-light);
 
+		@include hover {
+			background-color: var(--color-light);
+		}
+
 		&,
 		&::placeholder {
 			font: inherit;

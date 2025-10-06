@@ -13,6 +13,7 @@ class Header {
 
 	stateAttributes = {
 		ariaLabel: 'aria-label',
+		ariaExpanded: 'aria-expanded',
 		title: 'title',
 	};
 
@@ -70,6 +71,10 @@ class Header {
 		this.burgerButtonElement.setAttribute(
 			this.stateAttributes.ariaLabel,
 			isActiveBurgerButton ? textCloseMenu : textOpenMenu
+		);
+		this.burgerButtonElement.setAttribute(
+			this.stateAttributes.ariaExpanded,
+			isActiveBurgerButton
 		);
 	}
 

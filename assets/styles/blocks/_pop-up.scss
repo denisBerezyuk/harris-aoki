@@ -33,6 +33,10 @@
 		background-color: transparent;
 		border: none;
 		border-radius: 0;
+
+		@include hover {
+			color: var(--color-accent);
+		}
 	}
 
 	&__form {
