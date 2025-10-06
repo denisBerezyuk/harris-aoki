@@ -525,6 +525,7 @@ button[aria-label]::before {
 .field textarea.field__input {
   padding-block: 0.75rem;
   height: 129px;
+  resize: vertical;
 }
 .field__select {
   appearance: none;

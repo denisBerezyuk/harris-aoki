@@ -26,6 +26,7 @@
 	textarea.field__input {
 		padding-block: rem(12);
 		height: 129px;
+		resize: vertical;
 	}
 
 	&__select {
