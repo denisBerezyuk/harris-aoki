@@ -22,6 +22,8 @@
 	&__logo {
 		& .logo__image {
 			width: fluid(305, 165);
+			height: fluid(40, 20);
+			object-fit: contain;
 		}
 	}
 

@@ -624,6 +624,8 @@ button[aria-label]::before {
 }
 .header__logo .logo__image {
   width: clamp(10.3125rem, 7.0625rem + 13.3333333333vw, 19.0625rem);
+  height: clamp(1.25rem, 0.7857142857rem + 1.9047619048vw, 2.5rem);
+  object-fit: contain;
 }
 @media (width <= 47.99875rem) {
   .header__menu {
@@ -778,6 +780,7 @@ button[aria-label]::before {
 .card__title {
   text-transform: uppercase;
 }
+
 .card-article {
   --bodyPaddingX: 1.5rem;
   --bodyPaddingBottom: 1.5rem;
